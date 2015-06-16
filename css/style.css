@@ -1,0 +1,45 @@
+.clear{
+	clear:both;
+}
+.brand-logo{
+	margin-left: 10px;
+}
+nav svg {
+	fill: #fff;
+	margin-top: 8px;
+}
+.container .btn{
+	margin-top: 20px;
+}
+
+#number-table{
+	margin: 25px 0;
+}
+
+#output1, #output2 ,#output3, #output4 , #output5 ,#output6{
+	display: none;
+}
+
+.output{
+	background: #ccc;
+	padding: 10px;
+	margin: 20px 0;
+	text-align: center;
+	overflow-x: scroll;
+}
+.dropdown-content{
+	z-index: 1000!important;
+}
+@media screen and (max-width:992px){
+    .brand-logo{
+      margin: 0;
+    }
+    .btn{
+    	margin-bottom: 10px;
+    }
+}
+@media screen and (max-width:330px){
+    .brand-logo{
+      font-size: 1.5em!important;
+    }
+}
