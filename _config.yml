@@ -1,0 +1,9 @@
+# Site settings
+title: IO Generator
+description: > # this means to ignore newlines until "baseurl:"
+  Simple app to generate the output for a particular input.
+baseurl: "/io-generator" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown

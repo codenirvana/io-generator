@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">IO Generator</a>
+            <a class='button-collapse' data-activates='mobile-demo' href='#'>
+                <svg pointer-events='none' style='vertical-align: middle;' viewBox='0 0 48 48' width='2.7em' xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z'></path>
+                </svg>
+            </a>
+            <ul class='right hide-on-med-and-down'>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <ul class='side-nav' id='mobile-demo'>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

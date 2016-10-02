@@ -1,146 +1,119 @@
-<html>
-<head>
-	<title>IO Generator</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href='favicon.ico' rel='icon' type='image/x-icon'/>
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-</head>
-<body>
-	  <nav>
-	    <div class="nav-wrapper">
-	      <a href="#" class="brand-logo">IO Generator</a>
-	      <a class='button-collapse' data-activates='mobile-demo' href='#'>
-			<svg pointer-events='none' style='vertical-align: middle;' viewBox='0 0 48 48' width='2.7em' xmlns='http://www.w3.org/2000/svg'><path d='M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z'></path></svg>
-			</a>
-		  <ul class='right hide-on-med-and-down'>
-	        <li><a href="index.html">Home</a></li>
-	        <li><a href="about.html">About Us</a></li>
-	      </ul>
-	      <ul class='side-nav' id='mobile-demo'>
-			<li><a href="index.html">Home</a></li>
-	        <li><a href="about.html">About Us</a></li>
-	      </ul>
-	    </div>
-	  </nav>
-	  <div class="container">
-	  	<h3 class="grey-text text-darken-2 center">Test Your Output</h3>
+---
+layout: default
+---
 
-		  <ul class="collapsible popout row" data-collapsible="accordion">
-		    <li>
-		      <div class="collapsible-header"><i class="mdi-action-polymer"></i>Fibonacci Series</div>
-		      <div class="collapsible-body">
-		      	<p>Genarate the Fibonacci series upto N<sup>th</sup> element </p>
-		      	<div class="container">
-		      		<div class="input-field col m7 offset-m1 s12">
-			          <input id="number1" type="text">
-			          <label for="number1">Enter Number</label>
-			        </div>
-			        <a id="btn1" class="waves-effect waves-light btn col m3 s12">Generate</a>
-			        <div class="clear"></div>
-			        <div class="output s12" id="output1"></div>
-		      	</div>
-		      </div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header"><i class="mdi-social-whatshot"></i>N<sup>Th</sup> Fibaonacci element</div>
-		      <div class="collapsible-body">
-		      	<p>Gives out the N<sup>Th</sup> Fibonacci element of the series</p>
-		      	<div class="container">
-		      		<div class="input-field col m7 offset-m1 s12">
-			          <input id="number2" type="text">
-			          <label for="number2">Enter Number</label>
-			        </div>
-			        <a id="btn2" class="waves-effect waves-light btn col m3 s12">Generate</a>
-			        <div class="clear"></div>
-			        <div class="output s12" id="output2"></div>
-		      	</div>
-		      </div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Factorial</div>
-		      <div class="collapsible-body">
-		      	<p>Gives out factorial of a number</p>
-		      	<div class="container">
-		      		<div class="input-field col m7 offset-m1 s12">
-			          <input id="number3" type="text">
-			          <label for="number3">Enter Number</label>
-			        </div>
-			        <a id="btn3" class="waves-effect waves-light btn col m3 s12">Generate</a>
-			        <div class="clear"></div>
-			        <div class="output s12" id="output3"></div>
-		      	</div>
-		      </div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header"><i class="mdi-action-done-all"></i>Prime Checker</div>
-		      <div class="collapsible-body"><p>Checks whether the number is prime or not</p>
-		      	<div class="container">
-		      		<div class="input-field col m7 offset-m1 s12">
-			          <input id="number4" type="text">
-			          <label for="number4">Enter Number</label>
-			        </div>
-			        <a id="btn4" class="waves-effect waves-light btn col m3 s12">Generate</a>
-			        <div class="clear"></div>
-			        <div class="output s12" id="output4"></div>
-		      	</div>
-		      </div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header"><i class="mdi-action-done-all"></i>Armstrong Number</div>
-		      <div class="collapsible-body"><p>Checks whether the number is Armstrong or not</p>
-		      	<div class="container">
-		      		<div class="input-field col m7 offset-m1 s12">
-			          <input id="number5" type="text">
-			          <label for="number5">Enter Number</label>
-			        </div>
-			        <a id="btn5" class="waves-effect waves-light btn col m3 s12">Generate</a>
-			        <div class="clear"></div>
-			        <div class="output s12" id="output5"></div>
-		      	</div>
-		      </div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header"><i class="mdi-action-swap-horiz"></i>Number Converter</div>
-		      <div class="collapsible-body"><p>Conversion to and from a binary and decimal</p>
-		      	<div class="container">
-		      		<div class="input-field col m4 s12">
-			          <input id="number6" type="text">
-			          <label for="number6">Enter Number</label>
-			        </div>
-			         <div class="input-field col m4 s12">
-					    <select id="numberType">
-					      <option value="0" selected>Binary</option>
-					      <option value="1">Decimal</option>
-					    </select>
-					    <label>Select Number Type</label>
-					  </div>
-			        <a id="btn6" class="waves-effect waves-light btn col m4 s12">Generate</a>
-			        <div class="clear"></div>
-			        <table id="number-table">
-				        <thead>
-				          <tr>
-				              <th data-field="bin">Binary</th>
-				              <th data-field="dec">Decimal</th>
-				          </tr>
-				        </thead>
+<h3 class="grey-text text-darken-2 center">Test Your Output</h3>
 
-				        <tbody>
-				          <tr>
-				            <td id="output6a"></td>
-				            <td id="output6b"></td>
-				          </tr>
-				        </tbody>
-				      </table>
-		      	</div>
-		      </div>
-		    </li>
-		  </ul>
-		        
-	  </div>
-	
-	<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
-</html>
+<ul class="collapsible popout row" data-collapsible="accordion">
+	<li>
+		<div class="collapsible-header"><i class="mdi-action-polymer"></i>Fibonacci Series</div>
+		<div class="collapsible-body">
+			<p>Genarate the Fibonacci series upto N<sup>th</sup> element </p>
+			<div class="container">
+				<div class="input-field col m7 offset-m1 s12">
+					<input id="number1" type="text">
+					<label for="number1">Enter Number</label>
+				</div>
+				<a id="btn1" class="waves-effect waves-light btn col m3 s12">Generate</a>
+				<div class="clear"></div>
+				<div class="output s12" id="output1"></div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="collapsible-header"><i class="mdi-social-whatshot"></i>N<sup>Th</sup> Fibaonacci element</div>
+		<div class="collapsible-body">
+			<p>Gives out the N<sup>Th</sup> Fibonacci element of the series</p>
+			<div class="container">
+				<div class="input-field col m7 offset-m1 s12">
+					<input id="number2" type="text">
+					<label for="number2">Enter Number</label>
+				</div>
+				<a id="btn2" class="waves-effect waves-light btn col m3 s12">Generate</a>
+				<div class="clear"></div>
+				<div class="output s12" id="output2"></div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="collapsible-header"><i class="mdi-social-whatshot"></i>Factorial</div>
+		<div class="collapsible-body">
+			<p>Gives out factorial of a number</p>
+			<div class="container">
+				<div class="input-field col m7 offset-m1 s12">
+					<input id="number3" type="text">
+					<label for="number3">Enter Number</label>
+				</div>
+				<a id="btn3" class="waves-effect waves-light btn col m3 s12">Generate</a>
+				<div class="clear"></div>
+				<div class="output s12" id="output3"></div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="collapsible-header"><i class="mdi-action-done-all"></i>Prime Checker</div>
+		<div class="collapsible-body">
+			<p>Checks whether the number is prime or not</p>
+			<div class="container">
+				<div class="input-field col m7 offset-m1 s12">
+					<input id="number4" type="text">
+					<label for="number4">Enter Number</label>
+				</div>
+				<a id="btn4" class="waves-effect waves-light btn col m3 s12">Generate</a>
+				<div class="clear"></div>
+				<div class="output s12" id="output4"></div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="collapsible-header"><i class="mdi-action-done-all"></i>Armstrong Number</div>
+		<div class="collapsible-body">
+			<p>Checks whether the number is Armstrong or not</p>
+			<div class="container">
+				<div class="input-field col m7 offset-m1 s12">
+					<input id="number5" type="text">
+					<label for="number5">Enter Number</label>
+				</div>
+				<a id="btn5" class="waves-effect waves-light btn col m3 s12">Generate</a>
+				<div class="clear"></div>
+				<div class="output s12" id="output5"></div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="collapsible-header"><i class="mdi-action-swap-horiz"></i>Number Converter</div>
+		<div class="collapsible-body">
+			<p>Conversion to and from a binary and decimal</p>
+			<div class="container">
+				<div class="input-field col m4 s12">
+					<input id="number6" type="text">
+					<label for="number6">Enter Number</label>
+				</div>
+				<div class="input-field col m4 s12">
+					<select id="numberType">
+						<option value="0" selected>Binary</option>
+						<option value="1">Decimal</option>
+					</select>
+					<label>Select Number Type</label>
+				</div>
+				<a id="btn6" class="waves-effect waves-light btn col m4 s12">Generate</a>
+				<div class="clear"></div>
+				<table id="number-table">
+					<thead>
+						<tr>
+							<th data-field="bin">Binary</th>
+							<th data-field="dec">Decimal</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td id="output6a"></td>
+							<td id="output6b"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
